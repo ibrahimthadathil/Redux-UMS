@@ -14,7 +14,7 @@ mongoose.connect(process.env.MONGO).then(()=>{
 })
 const app = express()
 app.use(express.json())
-// app.use(express.urlencoded({extendedL:true}))
+app.use(express.urlencoded({extendedL:true}))
 app.use(cookieParser())
 app.use('/api',userRoute)
 app.use('/api/auth',authRoute)

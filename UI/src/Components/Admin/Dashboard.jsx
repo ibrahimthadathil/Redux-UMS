@@ -24,7 +24,7 @@ export default function Dashboard() {
   };
   useEffect(() => {
     test();
-  }, []);
+  },[]);
 
   useEffect(() => {
     if (searchitem.trim() !== "") {
