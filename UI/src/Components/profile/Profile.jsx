@@ -56,9 +56,7 @@ export default function Profile() {
   const handleSubmit = async(e)=>{
     e.preventDefault()
     try {
-      const {data} = await axios.post(`/api/upload/${user._id}`,formdata)
-      console.log(data.user);
-      
+      const {data} = await axios.post(`/api/upload/${user._id}`,formdata)      
       dispatch(updateUserData(data.user))
       toast.success(data.msg)
       
